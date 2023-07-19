@@ -1,0 +1,30 @@
+{% extends 'ERP/base.html' %}
+{% load static %}
+{% block content %}
+<div class="edit">
+    <p> Serial Number : {{product.serial_number}}</p>
+    <form  method="post">
+        {% csrf_token %}
+        <label for="name"> Name: </label>
+       <input type="text" name="name" value="{{product.name}}"><br><br>
+       <label for="description"> Description: </label><br>
+       <textarea name="description"  id="" cols="50" rows="5">{{product.description}}</textarea><br><br>
+       <div class="edit2">
+        <label for="tax"> Tax:</label>
+        <input type="number" value="{{product.tax}}" name="tax"><br><br>
+        <label for="stock"> Stock: </label><br>
+        <input type="number" value="{{product.stock}}" name="stock"><br><br>
+       </div>
+       <div class="edit1">
+           <label for="purchase_price"> Purchase Price: </label><br>
+           <input type="number" value="{{product.purchase_price}}" name="purchase_price" ><br><br>
+           <label for="price"> Price: </label><br>
+           <input type="number" value="{{product.price}}" name="price" ><br><br>
+       </div>
+       <button class="btn1" type="submit">Edit Product:</button><br>
+    </form>
+    <br><br><br>
+    <input class="btn btn-outline-primary" type=button value="Previous Page" onClick="javascript:history.go(-1);">
+</div>
+<br><br><br>
+{% endblock %}

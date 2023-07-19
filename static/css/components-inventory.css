@@ -1,0 +1,13 @@
+.d-initiall {
+    display: block
+}
+
+.inventory-excel {
+    width: 100%;
+    height: 90vh;
+}
+
+.h100vh {
+    height: 90vh;
+    overflow: auto;
+}

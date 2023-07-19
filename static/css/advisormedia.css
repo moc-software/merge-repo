@@ -1,0 +1,709 @@
+@media (max-width: 480px) {
+  .customer_panel_nav {
+    width: 100%;
+    height: 5vh;
+  }
+  .cpn_left img {
+    height: 7vw;
+  }
+
+  .cpn_center h1 {
+    font-size: 2.5vw;
+  }
+  .cpn_right svg {
+    height: 5vw;
+    margin-left: 2vw;
+    display: initial;
+  }
+
+  .cpn_right button {
+    display: none;
+  }
+  .box1 {
+    display: none;
+  }
+
+  .advisor {
+    width: 100%;
+  }
+  .jobCardDesc h1 {
+    font-size: 3vw;
+    margin-top: 0.8vh;
+  }
+  .tax_desc {
+    width: 80%;
+  }
+  .tax_desc label {
+    font-size: 2.5vw;
+  }
+  .tax_desc input {
+    font-size: 2vw;
+    padding: 0.4vh 0.5vw;
+    width: 12vw;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+  }
+
+  .jobcard1,
+  .jobcard3,
+  .bill-calc,
+  .amount_calc {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.8vw;
+  }
+  .jobcard1 input,
+  .jobcard3 textarea,
+  .part input,
+  .jobpart3 input,
+  .jobpart4 input,
+  .jobpart4 select,
+  .bill-calc input,
+  .amount_calc input,
+  #grossAmount,
+  #grossAmount1,
+  #grossTotal {
+    font-size: 3vw;
+    padding: 0.4vh 0.5vw;
+    align-items: center;
+    border-radius: 1vw;
+    width: 26vw;
+  }
+
+  .jobcard1 label,
+  .jobcard3 label,
+  .part label,
+  .jobpart3 label,
+  .jobpart4 label,
+  .jobpart4 label,
+  .bill-calc label,
+  .amount_calc label,
+  .Gross_Amount label,
+  .Gross_Total {
+    margin: 0 1vw;
+    font-size: 3vw;
+  }
+
+  .jobcard3 textarea {
+    width: 90vw;
+    height: 10vh;
+  }
+  .bill-calc {
+    width: 100%;
+  }
+
+  .amount_calc {
+    width: 100%;
+  }
+
+  #taxOnLabour,
+  #tax {
+    padding: 0.5vh 0vw;
+    border-radius: 1vw;
+  }
+  .last {
+    margin-top: 4vh;
+  }
+
+  #jobCardButton {
+    padding: 0.6vw 1vw;
+    font-size: 2.5vw;
+  }
+  #estimateButton{
+    padding: 0.6vw 1vw;
+    font-size: 2.5vw;
+  }
+  #taxonpart,
+  #taxonlbr {
+    margin-bottom: 0vh;
+  }
+  select {
+    font-size: 3.1vw;
+    margin-bottom: 1vh;
+  }
+
+  .table-wrapper {
+    padding: 1vmax;
+    width: 100%;
+    font-size: 2.2vw;
+    margin-bottom: 1vh;
+  }
+  .table-wrapper1 {
+    padding: 1vmax;
+    width: 100%;
+    font-size: 2.2vw;
+    margin-top: 7vh;
+    margin-bottom: 1vh;
+  }
+  .advisor-top button{
+     transform: scale(.7);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #1a5772;
+  }
+
+  .customer_panel_nav {
+    height: 10vh;
+  }
+
+  .cpn_left img {
+    display: none;
+  }
+
+  .cpn_left svg {
+    height: 5vw;
+    margin-left: 2vw;
+    display: initial;
+  }
+
+  .cpn_right button {
+    padding: 1vh 2vw;
+    font-size: 2vw;
+  }
+
+  .box1 {
+    display: none;
+  }
+
+  .advisor {
+    width: 100%;
+    border-left: none;
+  }
+
+  .advisor-top {
+    width: 100%;
+    height: 6vh;
+    text-align: center;
+    border-bottom: 1px solid white;
+  }
+
+  .jobcard1,
+  .jobcard3,
+  .jobpart3 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1vw;
+  }
+
+  .jobcard1 input,
+  .jobcard3 textarea,
+  .jobpart2 select,
+  .part input,
+  .jobpart3 input,
+  .jobpart4 input,
+  .jobpart4 select {
+    padding: 1vh 1vw;
+    border-radius: 1vw;
+  }
+
+  .jobcard3 textarea {
+    width: 95vw;
+  }
+
+  .part {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0.5vw;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #plus {
+    font-size: 5vw;
+  }
+
+  #listcard {
+    width: 85vw;
+    height: 10vh;
+    margin-top: 2vh;
+  }
+
+  .jobpart4 {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+  }
+
+  #jobCardButton {
+    padding: 1vh 6vw;
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .main {
+    width: 100%;
+    min-height: 165vh;
+    overflow: hidden;
+    background-color: #1a5772;
+  }
+
+  .customer_panel_nav {
+    height: 10vh;
+  }
+
+  .cpn_left img {
+    display: none;
+  }
+
+  .cpn_left svg {
+    height: 5vw;
+    margin-left: 2vw;
+    display: initial;
+  }
+
+  .cpn_right button {
+    padding: 1vh 2vw;
+    font-size: 2vw;
+  }
+
+  .box1 {
+    display: none;
+  }
+
+  .advisor {
+    width: 100%;
+    border-left: none;
+  }
+
+  .advisor-top {
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+    border-bottom: 1px solid white;
+  }
+
+  .jobcard1,
+  .jobcard3,
+  .jobpart3 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 1vw;
+  }
+
+  .jobcard1 input,
+  .jobcard3 textarea,
+  .part input,
+  .jobpart3 input,
+  .jobpart4 input,
+  .jobpart4 select {
+    padding: 1vh 1vw;
+    border-radius: 1vw;
+    margin: 1vw;
+  }
+
+  .jobcard3 textarea {
+    width: 30vw;
+  }
+
+  .part {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0.5vw;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #plus {
+    font-size: 4vw;
+    margin-left: 0.5vw;
+  }
+
+  #listcard {
+    width: 25vw;
+    height: 14vh;
+    margin-top: 2vh;
+  }
+
+  .jobpart4 {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+  }
+
+  #jobCardButton {
+    padding: 1vh 6vw;
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .main {
+    width: 100%;
+    min-height: 130vh;
+    overflow: hidden;
+    background-color: #1a5772;
+  }
+
+  .customer_panel_nav {
+    height: 10vh;
+  }
+
+  .cpn_left img {
+    display: none;
+  }
+
+  .cpn_left svg {
+    height: 3vw;
+    margin-left: 2vw;
+    display: initial;
+  }
+
+  .cpn_right button {
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
+  }
+
+  .box1 {
+    display: none;
+  }
+
+  .advisor {
+    width: 100%;
+    border-left: none;
+  }
+
+  .advisor-top {
+    width: 100%;
+    height: 9vh;
+    text-align: center;
+    border-bottom: 1px solid white;
+  }
+
+  .jobcard1,
+  .jobcard3,
+  .jobpart3 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1vw;
+  }
+
+  .jobcard1 input,
+  .jobcard3 textarea,
+  .part input,
+  .jobpart3 input,
+  .jobpart4 input,
+  .jobpart4 select {
+    padding: 1vh 1vw;
+    border-radius: 1vw;
+  }
+
+  .jobcard3 textarea {
+    width: 25vw;
+  }
+
+  .part {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0.5vw;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .part input {
+    margin-right: 1vw;
+  }
+
+  #plus {
+    font-size: 4vw;
+    margin-left: 0.5vw;
+  }
+
+  #listcard {
+    width: 40vw;
+    height: 20vh;
+    margin-top: 2vh;
+    margin-left: 2vw;
+  }
+
+  .jobpart4 {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+  }
+
+  #jobCardButton {
+    padding: 1vh 6vw;
+    font-size: 2vw;
+  }
+
+  .advisorButton {
+    width: 100%;
+  }
+
+  #administrator {
+    width: 100%;
+  }
+}
+
+/* @media (min-width:1280px ) and (max-height: 1200px) { 
+
+      
+    .main{
+        width: 100%;
+        min-height: 120vh;
+        overflow: hidden;
+    }
+
+    .cpn_left{
+        width: 40%;
+        height: inherit;
+        display: flex;
+        padding: .5vw;
+        align-items: center;
+    }
+    .cpn_left img{
+        height: 5vw;
+    }
+    .cpn_left svg{
+        height: 2.5vw;
+        margin-left: 2vw;
+    
+    }
+    .cpn_right button {
+        padding: 1vh 1vw;
+        background-color: black;
+        color: white;
+        border-radius: 1vw;
+        border: none;
+        font-size: 1vw;
+        margin-right: .5vw;
+    }
+    .box{
+        width: 100%;
+        height: 110vh;
+        display: flex;
+        color: white;
+        background-color: #1a5772;
+        
+    }
+    .box1{
+        width: 15%;
+        height: 120;
+        background-color: #1a5772;
+    }
+    .box1 li{
+        width: 115%;
+        height: 8vh;
+        margin-bottom: .5vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+padding-left: .5vw;
+        cursor: pointer;
+        margin-left: -2vw;
+    }
+
+    .box1 li :hover {
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        background-color:rgba(0, 0, 0,.137);
+        transition: 1s all ease-in;
+    }
+    .box1 li a{
+        color: white;
+        text-decoration: none;
+    
+    }
+    .advisor{
+        width: 85%;
+        height: 150vh;
+    border-left: 1px solid white;
+    }
+    .advisor-top{
+        width: 100%;
+        height: 8vh;
+        border-bottom: 1px solid white;
+    }
+    .advisor-top h1{
+        margin: 1vw;
+    }
+    .advisor-middle{
+        padding: 1vw;
+    }
+    .jobcard1,.jobcard2,.jobcard3,.jobpart3{
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1vw;
+    }
+    
+    .jobcard1 input ,.jobcard2 input,.jobcard3 textarea , .part input,.jobpart3 input,.jobpart4 input , .jobpart4 select{
+        padding: 1vh 1vw;
+        border-radius: .3vw;
+        border: none;
+        outline: none;
+        
+    }
+    .jobcard3 textarea{
+        padding: 1vh 1vw;
+        border-radius: .3vw;
+        border: none;
+        outline: none; 
+        width: 20vw;
+        height: 20vh;
+    }
+    .part {
+        width: 60%;
+        align-items: center;
+        justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 1vw; 
+    }
+    #plus{
+        font-size: 2vw;
+        font-weight: 900;
+        color: rgb(120, 255, 120);
+        cursor: pointer;
+        margin-left: -3vw;
+    }
+    #listcard{
+    width: 10vw;
+    height: 10vh;
+    background-color:white;
+    border-radius: .5vw;
+    }
+    
+    #listcard li {
+    list-style-type: none;
+    }
+    #jobCardButton{
+        padding: .6vw 1vw;
+        font-size: 1vw;
+        border-radius: 1vw;
+        background-color: green;
+        border: none;
+        cursor: pointer;
+        color: #ffffff;
+        margin-top: 3vh;
+    }
+    .jobpart4{
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+    display: flex;
+    padding: 1vw;
+    }
+    
+    .overlay1{
+        width: 100%;
+        height: 100vh;
+        background-color: #1a5772;
+        position: fixed;
+        display: none;
+        top: 0;
+    
+    }
+    .cross1{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;  
+        padding: 2vh 2vw;
+    }
+     .overlay1 .cross1 h1{
+        font-size: 2vh;
+        cursor: pointer;
+    }
+     .overlay1 .sidebar{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    .overlay1 .sidebar ul{
+        list-style-type: none;
+    }
+    
+     .overlay1 .sidebar ul li a{
+        text-decoration: none;
+        font-size: 3vh;
+        color: white;
+    }
+     .overlay1 .sidebar ul li {
+        margin-top: 2vh;
+    }
+    
+    table{
+        width: 100%;
+        height: 10vh;
+        border: 1px solid black;
+    }
+
+  } */
+
+@media (max-width: 650px) {
+  .advisorButton {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15vh;
+    overflow: hidden;
+  }
+
+  .advisorButton button {
+    margin: 13px 6px;
+    width: 26vh;
+    height: 10vh;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.6vh;
+  }
+  .margin-fix {
+    margin-top: 4vh;
+  }
+}
+
+@media (max-width: 470px) {
+  .jobcard2 {
+    padding: 0.8vw;
+  }
+
+  .jobcard2 select, .bill-calc select, .bill-calc input ,
+  .jobcard2 input {
+    font-size: 3vw;
+    padding: 0.4vh 0.5vw;
+    align-items: center;
+    border-radius: 1vw;
+    width: 26vw;
+    margin-right: 3px;
+  }
+  .jobcard2M {
+    margin-left: 2.8px !important;
+  }
+  .jobcard2 label {
+    font-size: 3vw;
+  }
+}

@@ -1,0 +1,627 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+}
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #8f54a0 #ffffff;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.529);
+    border-radius: 10px;
+    border: 1px solid #f2f2f2;
+  }
+
+.invoice{
+     width:100%;
+     height: 100vh;
+    border-left: .1px solid white;
+    background-color: #1a5772;
+    position: fixed;
+    top: 0;
+    display: none;
+    overflow: auto;
+}
+.preInvoice_desc{
+    width: 100%;
+    background-color: #fff;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+    padding: .5vw;
+}
+.mainInvoice_desc {
+    width: 100%;
+    background-color: #fff;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+ padding: .5vw;
+}
+.estimate_desc{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+    padding: .5vw;
+  }
+
+.invoice_top{
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: end;
+
+}
+.cross4,.cross5{
+    cursor: pointer;
+}
+.pre_invoice,.main_invoice,.estimate_invoice{
+    width: 100%; 
+    height: 10vh;
+    padding: 0vh .5vw;
+    display: flex;
+    align-items: center !important ;
+    justify-content: space-between;
+}
+.logo img{
+ height: 5vw;
+ margin-left: 2vw;
+}
+
+.company_details  {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.company_details h3 {
+    font-size: 2vw;
+    margin-left: 3vw;
+}
+.gstinNO,.invoiceNO{
+    display: flex;
+    align-items: center ;
+    padding: 0 1vw;
+    height: 3vh;
+}
+.gstinNO h6,.invoiceNO h6{
+    font-size: 1vw;
+    margin-top: 1vh;
+}
+.gstinNO p,.invoiceNO p{
+font-size: 1vw;
+margin-top: 2vh;
+margin-left: 1vw;
+}
+.main_invoice h3{
+    font-size: 4vh;
+}
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+}
+.customer_info{
+    width: 65%;
+    height: inherit;
+    padding-left: 2.5vw;
+}
+.customer_info h1{
+    font-size: 2vw;
+}
+.customer_info h2{
+    font-size: 1.5vw;
+}
+.customer_info h3{
+    font-size: 1.3vw;
+}
+.customer_info p{
+    font-size: 1.1vw;
+    width: 60%;
+
+}
+
+.vehicle_info{
+    width: 20vw;
+    height: inherit;
+    margin-right: 5vw;
+}
+.jobno ,.date,.time{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jobno h1 ,.date h1,.time h1{
+font-size: 1.8vh;
+}
+.jobno p,.date p,.time p{
+    margin-top: 0vh;
+    margin-left: 3vw;
+    font-size: 2vh;
+}
+
+
+.desc1,.desc2,.desc3,.desc4{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.desc1 h1,.desc2 h1,.desc3 h1,.desc4 h1{
+    font-size: 2vh;
+    margin-bottom: 0vh;
+}
+.desc1 p,.desc2 p,.desc3 p,.desc4 p{
+    margin-top: 1vh;
+    margin-left: 3vw;
+    font-size: 1.8vh;
+}
+
+.parts{
+    width: 100%;
+    /* background-color: #8f54a0; */
+}
+.parts-description,.labour-description {
+    padding: .5vw;
+}
+.parts-description h1,.labour-description h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5vw;
+  margin-bottom: 1vh;
+
+}
+.pre_balAmt{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0vw 1vw;   
+    margin-top: 1vh;
+}
+.parts_total,.partsTax_total,.parts_subtotal,.discountOnParts
+,.labour_subtotal, .labourTax_total,.labour_total,.discountOnLabour
+,.pre_total,.afterDiscount ,.discount,.pre_paidAmt,
+.pre_button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0vw 1vw;
+}
+.parts_total h1,.partsTax_total h1 ,.parts_subtotal h1,.discountOnParts h1
+ ,.labour_subtotal h1,.labourTax_total h1,.labour_total h1,.discountOnLabour h1
+ ,.pre_total h1,.afterDiscount h1,.pre_paidAmt h1,.discount h1
+ ,.pre_balAmt h1,.pre_button h1{
+    font-size: 1.2vw;
+}
+.parts_total p,.labour_total p,.parts_subtotal p ,.discountOnParts p
+,.partsTax_total p ,.labour_subtotal p,.labourTax_total p ,.discountOnLabour p
+,.pre_total p,.afterDiscount p,.pre_paidAmt p,.pre_balAmt p,.pre_button p{
+    font-size: 1vw;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+#preInvoiceButton, #mainInvoiceButton{
+    padding: .5vh 1.5vw;
+    border-radius: 1.5vw;
+    background-color: #1a5772;
+    color: #fff;
+    border: none;
+    margin-top: 1vh;
+}
+
+.discount input,.pre_paidAmt input{
+    width: 7vw;
+    padding: .5vw;
+    margin-left: .5vw;
+}
+
+
+
+
+
+@media  (max-width: 480px) { 
+
+
+.logo img{
+height: 8vw;
+margin-top: -4vh;
+}
+
+.company_details{
+    width: 60%;
+    text-align: center;
+}
+
+.company_details h3 {
+    font-size: 3.8vw;
+}
+.gstinNO,.invoiceNO{
+    display: flex;
+    align-items: center ;
+    flex-direction: column;
+    padding: 0 1vw;
+    height: 3vh;
+    margin-top: 2vh;
+}
+.gstinNO h6,.invoiceNO h6{
+    font-size: 2vw;
+    margin-top: 0vh;
+}
+.gstinNO p,.invoiceNO p{
+font-size: 2vw;
+margin-top: -1vh;
+margin-left: 1vw;
+}
+
+
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+}
+.customer_info{
+    width: 50%;
+    height: inherit;
+    padding-left: 2.5vw;
+
+}
+.customer_info h1{
+    font-size: 3vw;
+}
+.customer_info h2{
+    font-size: 2.5vw;
+}
+.customer_info h3{
+    font-size: 2.5vw;
+}
+.customer_info p{
+    font-size: 2.1vw;
+    width: 80%;
+}
+.vehicle_info{
+    width: 50%;
+    height: inherit;
+}
+.jobno ,.date,.time{
+   height: 2.5vh;
+   width:100%;
+   justify-content: space-between;
+}
+
+.jobno h1 ,.date h1,.time h1{
+font-size: 2.5vw;
+
+}
+.jobno p,.date p,.time p{
+    margin-top: 1vh;
+    margin-left: 2.5vw;
+    font-size: 2.5vw;
+ 
+}
+
+.desc1 ,.desc2 ,.desc3 ,.desc4 {
+    height: 2.5vh;
+    width: 100%;
+      justify-content: space-between;
+}
+.desc1 h1,.desc2 h1,.desc3 h1,.desc4 h1{
+    font-size: 2.8vw;
+    margin-bottom: 0vh;
+    width: 65%;
+}
+.desc1 p,.desc2 p,.desc3 p,.desc4 p{
+    margin-top: 1.5vh;
+    margin-left: 1vw;
+    font-size: 2.5vw;
+}
+.parts-description h1,.labour-description h1{
+    font-size: 3.5vw;  
+  }
+
+  .parts_total h1,.partsTax_total h1 ,.parts_subtotal h1,.discountOnParts h1
+  ,.labour_subtotal h1,.labourTax_total h1,.labour_total h1,.discountOnLabour h1
+  ,.pre_total h1,.afterDiscount h1,.pre_paidAmt h1,.discount h1
+  ,.pre_balAmt h1,.pre_button h1{
+     font-size: 2.2vw;
+ }
+ .parts_total p,.labour_total p,.parts_subtotal p ,.discountOnParts p
+ ,.partsTax_total p ,.labour_subtotal p,.labourTax_total p ,.discountOnLabour p
+ ,.pre_total p,.afterDiscount p,.pre_paidAmt p,.pre_balAmt p,.pre_button p{
+     font-size: 2vw;
+     margin-top: 1vh;
+     margin-left: 1vw;
+ }
+
+ .discount input,#paidAmt{
+    width: 15vw;
+    padding: 0vw;
+    margin-left: .5vw;
+    font-size: 2vw;
+    margin-top: -2vw;
+    /* border: none; */
+}
+ #preInvoiceButton, #mainInvoiceButton{
+    padding: .8vh 1.5vw;
+    font-size: 3vw;
+margin-top: 1vh;
+}
+#parts_desc,#labour_desc
+ {
+  padding: 1vmax;
+  width: 100%;
+  font-size: 2.2vw;
+margin-bottom: 1vh;
+}
+
+
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .logo img{
+        height: 8vw;
+        margin-top: -4vh;
+        }
+        
+        
+        .company_details h3 {
+            font-size: 4vw;
+            text-align: center;
+        }
+        .gstinNO ,.invoiceNO {
+        height: 2vh;
+            }
+        .gstinNO h6,.invoiceNO h6{
+            font-size: 2vw;
+        }
+        .gstinNO p,.invoiceNO p{
+        font-size: 2vw;
+        }
+        .company_taxDetail{
+            width:45%;
+            margin-top: -2vh;
+        }
+        
+        .top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            display: flex;
+        }
+        .customer_info{
+            width: 50%;
+            height: inherit;
+            padding-left: 2.5vw;
+        
+        }
+        .customer_info h1{
+            font-size: 3vw;
+        }
+        .customer_info h2{
+            font-size: 2.5vw;
+        }
+        .customer_info h3{
+            font-size: 2.5vw;
+        }
+        .customer_info p{
+            font-size: 2.1vw;
+            width: 80%;
+        }
+        .vehicle_info{
+            width: 50%;
+            height: inherit;
+        }
+        .jobno ,.date,.time{
+           height: 2.5vh;
+           width:100%;
+           justify-content: space-between;
+        }
+        
+        .jobno h1 ,.date h1,.time h1{
+        font-size: 2.5vw;
+        
+        }
+        .jobno p,.date p,.time p{
+            margin-top: 1vh;
+            margin-left: 2.5vw;
+            font-size: 2.5vw;
+         
+        }
+        
+        .desc1 ,.desc2 ,.desc3 ,.desc4 {
+            height: 2.5vh;
+            width: 100%;
+              justify-content: space-between;
+        }
+        .desc1 h1,.desc2 h1,.desc3 h1,.desc4 h1{
+            font-size: 2.8vw;
+            margin-bottom: 0vh;
+            width: 65%;
+        }
+        .desc1 p,.desc2 p,.desc3 p,.desc4 p{
+            margin-top: 1.5vh;
+            margin-left: 1vw;
+            font-size: 2.5vw;
+        }
+        .parts-description h1,.labour-description h1{
+            font-size: 3.5vw;  
+          }
+        
+          .parts_total h1,.partsTax_total h1 ,.parts_subtotal h1,.discountOnParts h1
+          ,.labour_subtotal h1,.labourTax_total h1,.labour_total h1,.discountOnLabour h1
+          ,.pre_total h1,.afterDiscount h1,.pre_paidAmt h1,.discount h1
+          ,.pre_balAmt h1,.pre_button h1{
+             font-size: 2.2vw;
+         }
+         .parts_total p,.labour_total p,.parts_subtotal p ,.discountOnParts p
+         ,.partsTax_total p ,.labour_subtotal p,.labourTax_total p ,.discountOnLabour p
+         ,.pre_total p,.afterDiscount p,.pre_paidAmt p,.pre_balAmt p,.pre_button p{
+             font-size: 2vw;
+             margin-top: 1vh;
+             margin-left: 1vw;
+         }
+        
+         .discount input,#paidAmt{
+            width: 15vw;
+            padding: 0vw;
+            margin-left: .5vw;
+            font-size: 2vw;
+            margin-top: -2vw;
+            /* border: none; */
+        }
+         #preInvoiceButton, #mainInvoiceButton{
+            padding: .8vh 1.5vw;
+            font-size: 3vw;
+        margin-top: 1vh;
+        }
+        #parts_desc,#labour_desc
+         {
+          padding: 1vmax;
+          width: 100%;
+          font-size: 2.2vw;
+        margin-bottom: 1vh;
+        }
+        
+
+
+ }
+
+ @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) { 
+    .logo img{
+        height: 8vw;
+        margin-top: -4vh;
+        }
+        .company_details  {
+        width: 60%;
+        }
+        
+        .company_details h3 {
+            font-size: 4vw;
+            text-align: center;
+        }
+        
+        .gstinNO h6,.invoiceNO h6{
+            font-size: 2vw;
+        }
+        .gstinNO p,.invoiceNO p{
+        font-size: 2vw;
+        }
+        
+        .top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            display: flex;
+        }
+        .customer_info{
+            width: 50%;
+            height: inherit;
+            padding-left: 2.5vw;
+        
+        }
+        .customer_info h1{
+            font-size: 3vw;
+        }
+        .customer_info h2{
+            font-size: 2.5vw;
+        }
+        .customer_info h3{
+            font-size: 2.5vw;
+        }
+        .customer_info p{
+            font-size: 2.1vw;
+            width: 80%;
+        }
+        .vehicle_info{
+            width: 50%;
+        }
+        .jobno ,.date,.time{
+           height: 2vh;
+           width:100%;
+           justify-content: space-between;
+        }
+        
+        .jobno h1 ,.date h1,.time h1{
+        font-size: 2.5vw;
+        
+        }
+        .jobno p,.date p,.time p{
+            margin-top: 1vh;
+            margin-left: 2.5vw;
+            font-size: 2.5vw;
+         
+        }
+        
+        .desc1 ,.desc2 ,.desc3 ,.desc4 {
+            height: 1.8vh;
+            width: 100%;
+              justify-content: space-between;
+        }
+        .desc1 h1,.desc2 h1,.desc3 h1,.desc4 h1{
+            font-size: 2.8vw;
+            margin-bottom: 0vh;
+            width: 65%;
+        }
+        .desc1 p,.desc2 p,.desc3 p,.desc4 p{
+            margin-top: 1.5vh;
+            margin-left: 1vw;
+            font-size: 2.5vw;
+        }
+        .parts-description h1,.labour-description h1{
+            font-size: 3.5vw;  
+          }
+        
+          .parts_total h1,.partsTax_total h1 ,.parts_subtotal h1,.discountOnParts h1
+          ,.labour_subtotal h1,.labourTax_total h1,.labour_total h1,.discountOnLabour h1
+          ,.pre_total h1,.afterDiscount h1,.pre_paidAmt h1,.discount h1
+          ,.pre_balAmt h1,.pre_button h1{
+             font-size: 2.2vw;
+         }
+         .parts_total p,.labour_total p,.parts_subtotal p ,.discountOnParts p
+         ,.partsTax_total p ,.labour_subtotal p,.labourTax_total p ,.discountOnLabour p
+         ,.pre_total p,.afterDiscount p,.pre_paidAmt p,.pre_balAmt p,.pre_button p{
+             font-size: 2vw;
+             margin-top: 1vh;
+             margin-left: 1vw;
+         }
+        
+         .discount input,#paidAmt{
+            width: 15vw;
+            padding: 0vw;
+            margin-left: .5vw;
+            font-size: 2vw;
+            margin-top: -2vw;
+            /* border: none; */
+        }
+         #preInvoiceButton, #mainInvoiceButton{
+            padding: .8vh 1.5vw;
+            font-size: 3vw;
+        
+        }
+        
+
+ }

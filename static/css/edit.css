@@ -1,0 +1,54 @@
+.edit{
+    width:100%;
+    height:100%;
+    /* background-color: rgba(0, 0, 0, 0.482); */
+}
+.edit textarea{
+    resize: none;
+}
+.edit p {
+    font-size:1.6rem;
+}
+.edit label{
+    font-size: 26px;
+}
+.edit1 {
+    width:100%;
+    height:10%;
+    /* background-color: rgba(0, 0, 0, 0.482); */
+    display: flex;
+    align-items: center;
+}
+.edit1 label{
+    margin-left: 4%;
+}
+.edit1 , .edit2{
+    margin-top:1%;
+    display: flex;
+    margin-left: -4%;
+}
+.edit1 input{
+    width:24%;
+    height:12%;
+}
+.edit2{
+    display: flex;
+    width:100%;
+    height:10%;
+    /* background-color: rgba(0, 0, 0, 0.482); */
+    align-items: center;
+}
+.edit2 label{
+    margin-left: 4%;
+}
+.edit2 input{
+    width:24%;
+    height:12%;
+}
+.edit .btn1{
+    margin-top: 4%;
+    padding: 12px 24px;
+    border: 4px solid black;
+    border-radius: 50px;
+    color: black;
+}

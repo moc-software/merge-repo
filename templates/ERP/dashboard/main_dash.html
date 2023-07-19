@@ -1,0 +1,6 @@
+
+{% if request.user.role == "CUSTOMER" %}
+{% include 'ERP/dashboard/customer.html' %}
+{% else %}
+{% include 'ERP/dashboard/admin.html' %}
+{% endif %}

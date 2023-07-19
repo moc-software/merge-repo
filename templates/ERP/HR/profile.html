@@ -1,0 +1,32 @@
+{% extends 'ERP/base.html' %}
+{% load static %}
+{% block content %}
+<div id="administrator">
+    <div id="admintop">
+      <img src="{% static 'img/ppppp.jpg' %}" alt="image">
+      <div id="admin-company">
+        <h1>Bhaiya ka shop hai😂</h1>
+        <h4>Hi {{request.user}} !</h4> 
+        <div id="admin-extra-dets">
+          <div>
+            <h6><b></b>Dealer Code -Mp678853</h6>
+            <h6><b>Phone NO - 98657899649</h6>
+            <h6><b>GST NO - Tplk878bp </h6>
+            <h6><b>PAN NO - hjkgjjk875</h6>
+            <h6><b>Email - jhon@gmail.com</h6>
+            <h6><b>Location - Bhopal</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-profile-bottom">
+      <button class="btn openInventory">Notification</button>
+      <button class="btn jobCardHistoryBtn">Messages</button>
+      <button class="btn">View Attendance</button>
+      <button class="btn openInventory">Notification</button>
+      <button class="btn jobCardHistoryBtn">Messages</button>
+      <button class="btn">View Attendance</button>
+      <button class="btn">View Attendance</button>
+    </div>
+  </div>
+{% endblock %}

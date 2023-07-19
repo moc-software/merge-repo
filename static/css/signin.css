@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body {
+    width: 100%;
+    min-height: 100vh;
+
+}
+.login-container{
+    width: 100%;
+    min-height: 100vh;
+background-color: #000000;
+}
+.login_cross{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.container1 {
+    width: 100%;
+    min-height: 80vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content1{
+    width: 30vw;
+    height: 65vh;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background:linear-gradient(to right,#022343c6,#004DA6);
+   }
+.content1 h2{
+    text-align: center;    
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.7rem;
+    margin-top: 1vh;
+    color: #ffffff;
+}
+
+.content1 > h3 {
+    font-size : 3vh;
+    font-family: 'Lexend', sans-serif;
+    margin-top: 1.5vh;
+    color: #ffffff;
+}
+
+.content1 #form input {
+    border:none;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px 0px;  
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;  
+    margin-left: 20px;
+}
+.content1>h5{
+    font: 400 .8vmax "gilroy";
+    margin-bottom: 7vh;
+    color:white;
+    text-align: center;
+
+      }
+.content1>h5>a{
+    font: 400 .8vmax "gilroy";
+    color: white;
+    text-decoration: underline;
+      }
+
+
+.content1 p {
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.5vh;
+    color: white;
+    margin-top: 1vh;
+}
+.content1 p  a {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    border: none;
+    color: #000000;
+}
+
+@media screen and (max-width:600px){
+    .content1{
+        width: 90vw;
+      
+       }
+    
+}
+@media screen and (min-width:600px) and (max-width:900px){
+    .content1{
+        width: 60vw;
+      
+       }
+}
+@media screen and (min-width:900px) and (max-width:1250px){
+    .content1{
+        width: 40vw;
+      
+       }
+}
+

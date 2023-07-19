@@ -1,0 +1,35 @@
+.main{
+    min-height:85vh;
+    width: 99%;
+    /* background-color: black; */
+}
+.main > h1{
+    padding-bottom: 3%;
+    font-weight: bold;
+}
+input , textarea{
+    padding: 8px 22px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid black;
+    /* box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.605) ; */
+}
+.inputs{
+    margin-top: 2%;
+    display: flex;
+}
+.inputs .a{
+    margin-left: 3%;
+}
+#btn{
+    margin-top:6%;
+    padding: 12px 24px;
+    border: 2px solid black;
+    border-radius: 25px;
+    /* box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.605) ; */
+}
+.main ::placeholder{
+   font-size: 16px;
+   color: black;
+   font-weight: 900;
+}

@@ -1,0 +1,57 @@
+{% extends 'ERP/base.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'ERP/search_widget.html' %}
+{% if messages %}
+<div class="msg">
+    <ul class="messages">
+        {% for message in messages %}
+        < li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<div class="tab">
+    <table id="myTable" class = 'table'>
+        <tr>
+        <th>ID</th>
+        <th>Number</th>
+        <th>Type</th>
+        <th>Center</th>
+        <th>Approved</th>
+        <th>Progress</th>
+        <th>Services</th>
+        <th>Additional Services</th>
+        <th>Action</th>
+        </tr>
+
+        {% for service in services %}
+        <tr>
+            <td>{{service.id}}</td>
+            <td>{{service.vehical.number}}</td>
+            <td>{{service.vehical.type}}</td>
+           
+            <td>{{service.center.name}}</td>
+            <td>{{service.is_approved}}</td>
+            <td>{{service.progress}}</td>
+            <td>
+                        
+                {% for ser in service.services.all %}
+            <p>{{ser.name}},</p>
+                    {% endfor %}
+            
+            </td>
+            <td>{{service.additional_services}}</td>
+            <td> 
+                <a class="btn btn-outline-info" href="{% url 'genrate_estimate' service.id %}">Genrate Estimate</a>
+                <a class="btn btn-outline-info" href="{% url 'progress_update_page' service.id %}">Update Progress</a>
+                <a class="btn btn-outline-secondary" href="{% url 'employee_service_update_page' service.id %}">Add Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+</table>
+</div>
+        <input class="btn btn-outline-primary" type=button value="Previous Page" onClick="javascript:history.go(-1);">
+{% endblock %}

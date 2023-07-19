@@ -1,0 +1,23 @@
+.EstimateHistory{
+    width: 100%;
+    min-height:100vh;
+}
+
+
+.estimateHistory_top {
+    margin:1vw;
+    display: flex;
+    align-items: center;
+}
+.estimateHistory_top > input{
+    margin-left: 1vh;
+    width: 25vh;
+}
+.estimate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgb(251, 251, 251);
+    width: 100%;
+    min-height: 15vh;
+}

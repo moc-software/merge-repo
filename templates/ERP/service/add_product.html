@@ -1,0 +1,38 @@
+{% extends 'ERP/base.html' %}
+{% load static %}
+{% block content %}
+
+<table class = 'table'>
+    <tr><th> Product </th> <th>Quantity</th> <th> Add </th></tr>
+    {% for product in products %}
+    <tr>
+    <td> {{product.name}}</td>
+    <td> 
+        <input name= 'qty-{{product.id}}' type="number" placeholder="Qty">
+    </td>
+    <td>
+        <a class="btn btn-primary"  hx-get = "{% url 'sell_product' product.id pk %}" hx-trigger="click" hx-target="#listpro" hx-include = '[name = "qty-{{product.id}}"] , [name = "sid"]' > Add</a>
+    </td>
+</tr>
+{% endfor %}
+ </table>
+
+ <form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Done">
+ </form>
+  <div id = 'listpro'>
+
+    
+  </div>
+  <br>
+<br>
+<input class="btn btn-outline-primary" type=button value="Previous Page" onClick="javascript:history.go(-1);">
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

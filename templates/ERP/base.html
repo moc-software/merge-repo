@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MOC Dashboard</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- <link rel="stylesheet" href="{% static 'css/dashboard.css' %}"> -->
+   <link rel="stylesheet" href="{% static 'css/dashboard1.css' %}">
+   <link rel="stylesheet" href="{% static 'css/product-add.css' %}">
+   <link rel="stylesheet" href="{% static 'css/edit.css' %}">
+   <link rel="stylesheet" href="{% static 'css/approve_estimate_page.css' %}">
+   <link rel="stylesheet" href="{% static 'css/employee_list.css' %}">
+
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <title>ERP MOC</title>
+<script src="https://unpkg.com/htmx.org@1.6.0"></script>
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+<div id="main">
+ <div class="wrapper hover_collapse">
+	<div class="top_navbar">
+    <div class="nav-left">
+		<div class="logo" ><img src="{% static 'img/MoC.png' %}" alt=""></div>
+        </div>
+        <div class="center">
+          <h1>Hi {{request.user}} !</h1> 
+          <div id="datetime"></div>
+        </div>
+        <div class="nav-right">
+          <div class="navigation">
+            <i class="ri-account-circle-line"></i>
+          </div> 
+        </div>
+	</div>
+<div class="content">
+  <div class="employee_profile">
+	{% include 'ERP/dashboard/main_dash.html' %}
+</div>
+	<div class="box">
+        {% block content %}
+	
+
+        {% endblock %}
+              
+	</div>
+</div>
+</div>
+   
+</div>
+<script src="{% static 'js/search.js' %}"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="{% static 'js/dashboard.js' %}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+var datetimeContainer = document.getElementById('datetime')
+    setInterval(updateDateTime, 1000);
+    function updateDateTime() {
+      var date = new Date();
+      var options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second:'numeric'
+      };
+      var formattedDateTime = date.toLocaleString(undefined, options);
+      datetimeContainer.textContent = formattedDateTime;
+    }
+  });
+</script>
+</body>
+</html>

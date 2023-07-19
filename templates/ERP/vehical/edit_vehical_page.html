@@ -1,0 +1,28 @@
+{% extends 'ERP/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<p>Vehical Number :- {{vehical.number}}</p>
+      <p> Vehical Type :-{{vehical.type}}</p>
+         
+          
+      
+   
+
+
+<form  method="post">
+    {% csrf_token %}
+    
+    <input type="text" name="vehicalnumber" placeholder="Vehical Number"><br><br>
+    <input type="text" name="vehicaltype" placeholder="Vehical Type"><br><br>
+    <button type="submit"> Edit Vehical Info</button>
+</form>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'ERP/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main">
+    <h1>Enter Your Product details</h1>
+<form  method="post">
+    {% csrf_token %}
+   <input type="text" name="name" placeholder="Enter Name of Product"><br><br>
+   <textarea name="description" placeholder="Add task description here" id="" cols="50" rows="5"></textarea><br><br>
+    <div class="inputs">
+        <input type="number" name="purchase_price" placeholder="Enter Purchase Price"><br><br>
+        <input class="a" type="number" name="price" placeholder="Enter Price of Product"><br><br>
+        <input class="a" type="number" name="tax" placeholder="Enter Tax "><br><br>
+        <input class="a" type="number" name="stock" placeholder="Enter stock "><br><br>
+    </div>
+   <button id="btn" type="submit">Add Product</button><br>
+</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,175 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    min-height: 100vh;
+    width: 100%;
+    color: #000000;
+    /* background-color: rgb(15, 18, 21); */
+    scroll-behavior: smooth;
+  }
+  #career_page {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../images/19873.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+ 
+  }
+  .career_overlay {
+    min-height: 100vh;
+    width: 100%;
+  
+    background-color: #0000009c;
+
+  }
+  .header-text {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+  }
+  .header-text h1 {
+    font-size: 3vw;
+    font-weight: 800;
+  }
+  .header-text p {
+    font-size: 1.5vw;
+    font-weight: 600;
+  }
+  .jobOpeningBox {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #000000;
+  }
+  .jobOpeningBox h1 {
+    font-size: 3.4vw;
+  }
+  .jobOpeningBox p {
+    font-size: 1.4vw;
+    font-weight: 700;
+  }
+  .jobOpeningBox button {
+    margin-top: 2vh;
+    background-color: #1d3754;
+    border: none;
+    padding: 12px 80px;
+    border-radius: 25px;
+  }
+  
+  .jobOpeningBox button a {
+    text-decoration: none;
+    color: white;
+  }
+  @media (max-width: 580px) {
+
+    .header-text {
+      margin-top: 15%;
+    }
+    .header-text h1 {
+      font-size: 12vw;
+    }
+    .header-text p {
+      font-size: 4vw;
+      text-align: center;
+    }
+
+    .jobOpeningBox h1 {
+      font-size: 6vw;
+      text-align: center;
+    }
+    .jobOpeningBox p {
+      font-size: 4vw;
+      margin-top: 5%;
+      text-align: center;
+      margin: 8px;
+    }
+    .jobOpeningBox button {
+      padding: 12px 50px;
+    }
+
+  }
+  @media (min-width: 575px) and (max-width: 767px) {
+    .header-text h1 {
+      font-size: 8vw;
+    }
+    .header-text p {
+      font-size: 4vw;
+      text-align: center;
+    }
+    .jobOpeningBox {
+      margin-top: 3vh;
+    }
+    .jobOpeningBox h1 {
+      font-size: 5vw;
+      text-align: center;
+      margin-top: 2vh;
+    }
+    .jobOpeningBox p {
+      font-size: 3vw;
+      margin-top: 5%;
+      text-align: center;
+      margin: 8px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1100px) {
+    .header-text h1 {
+      font-size: 6vw;
+    }
+    .header-text p {
+      font-size: 3vw;
+      text-align: center;
+    }
+    .jobOpeningBox {
+      height: 10vh;
+      margin-top: 3vh;
+    }
+    .jobOpeningBox h1 {
+      font-size: 5vw;
+      text-align: center;
+      margin-top: 3vh;
+    }
+    .jobOpeningBox p {
+      font-size: 3vw;
+      margin-top: 5%;
+      text-align: center;
+      margin: 8px;
+    }
+  }
+  @media (min-width: 1100px) and (max-width: 1399px) {
+    .header-text h1 {
+      font-size: 5vw;
+    }
+    .header-text p {
+      font-size: 2vw;
+      text-align: center;
+    }
+    .jobOpeningBox {
+      height: 10vh;
+      margin-top: 3vh;
+    }
+    .jobOpeningBox h1 {
+      font-size: 4vw;
+      text-align: center;
+      margin-top: 3vh;
+    }
+    .jobOpeningBox p {
+      font-size: 1.5vw;
+      margin-top: 5%;
+      text-align: center;
+      margin: 8px;
+    }
+  }

@@ -1,0 +1,754 @@
+{% load static %}
+{% include 'Base/header.html' %}
+  <div class="main">
+    <div class="container collapse">
+      <div class="chat-header">
+        <div class="logo">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvDQhI96KOJP4eaCohSsODK8xtaWhIUbLHFw&usqp=CAUcwt"
+            alt="">
+        </div>
+        <div class="title">Let's Chat</div>
+      </div>
+      <div class="chat-body">
+        <div class="loading hide">
+          <div class="circle circle1"></div>
+          <div class="circle circle2"></div>
+          <div class="circle circle3"></div>
+        </div>
+      </div>
+      <div class="chat-input">
+        <div class="input-sec">
+          <input type="text" autofocus placeholder="Type here" id="textinput">
+        </div>
+        <div class="send">
+          <img height="50px" src="https://png.pngtree.com/element_our/md/20180620/md_5b29c1e7b8dd3.jpg" alt="send">
+        </div>
+      </div>
+    </div>
+
+    <div class="dets0">
+      <div class="dets1">
+        <div class="cross"> <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff; height: 20px;"></i> </div>
+        <div class="booking-form">
+          <h2>Want To Get Your Vehicles Best Care.</h2>
+          <p>Search for your vehicle</p>
+          <form action="/bookservice" method="post">
+            <select class="round" name="typeOfReq" required>
+              <option selected disabled hidden value="">
+                Type of Request
+              </option>
+              <option value="Road-Side-Service">Road side service</option>
+              <option value="Pick-And-Drop">Pick & drop</option>
+              <option value="Workshop-Visit">Visit a nearby workshop.</option>
+            </select>
+
+            <select class="round" name="typeOfVehicle" id="type" onchange="toggleOptions()" required>
+              <option value="">Select vehicle type</option>
+              <option value="Two-Wheeler">Two wheeler</option>
+              <option value="Four-Wheeler">Four wheeler</option>
+            </select>
+
+            <select class="round" name="brand" id="brand" style="display: none;">
+              <option value="" disabled selected>Brand</option>
+              <option value="Tata">Tata</option>
+              <option value="Maruti">Maruti</option>
+              <option value="Mahindra">Mahindra</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="Honda">Honda</option>
+              <option value="Ford">Ford</option>
+              <option value="KIA">KIA</option>
+              <option value="Renault">Renault</option>
+              <option value="Volkswagen">Volkswagen</option>
+              <option value="Toyota">Toyota</option>
+              <option value="MG">MG</option>
+              <option value="Jeep">Jeep</option>
+              <option value="Audi">Audi</option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Mitsubishi">Mitsubishi</option>
+              <option value="Skoda">Skoda</option>
+              <option value="Chevrolet">Chevrolet</option>
+              <option value="Chevrolet">Others</option>
+            </select>
+
+            <select class="round" name="brand" id="brand" style="display: none;">
+              <option value="" disabled selected>Brand</option>
+              <option value="Hero">Hero</option>
+              <option value="Honda">Honda</option>
+              <option value="Bajaj">Bajaj</option>
+              <option value="TVS">TVS</option>
+              <option value="Yamaha">Yamaha</option>
+              <option value="Suzuki">Suzuki</option>
+              <option value="Royal Enfield">Royal Enfield</option>
+              <option value="Mahindra">Mahindra</option>
+              <option value="KTM">KTM</option>
+              <option value="Jawa">Jawa</option>
+              <option value="Jawa">Others</option>
+            </select>
+
+            <select class="round" name="fuelType" id="fuel" required>
+              <option selected disabled hidden value="">
+                Select Fuel Type
+              </option>
+              <option value="Petrol">Petrol</option>
+              <option value="Diesel">Diesel</option>
+              <option value="CNG">CNG</option>
+            </select>
+
+            <input type="text" class="round mt-1" name="model" id="model" placeholder="Model" required>
+            <input type="text" class="mt-1" name="name" id="phone" placeholder="Enter Your Name" required />
+            <input type="tel" class="mt-1" name="contact" id="phone" placeholder="Number" pattern="[0-9]{10}"
+              required />
+            <input style="color:#ffffff;" id="submit" class="mt-2" type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--    first page    -->
+    <div class="toggler">
+      <div class="toggler-top">
+        <h1 class="togglerCross">❌</h1>
+      </div>
+      <ul class="nav-link">
+        <li><a href="/">Home</a></li>
+        <li><a href="/our-services">Our-Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/career">Career</a></li>
+        <li><a href="/login">Join Us</a></li>
+      </ul>
+    </div>
+    <div class="first_page">
+      <div class="nav">
+        <div class="logo"> </div>
+        <img class="logo_img" src="{% static 'img/images/MoC.png' %}" alt="">
+        <img class="menu_icon" src="{% static 'img/images/menu-line.svg' %}">
+        <div class="nav_content">
+          <a href="/">
+            <p>Home</p>
+          </a>
+          <a href="/service">
+            <p>Our-services</p>
+          </a>
+          <a href="/career">
+            <p>Careers</p>
+          </a>
+          <a href="/contact">
+            <p>Contact</p>
+          </a>
+          <a href="/login">
+            <p>Join Us</p>
+          </a>
+        </div>
+      </div>
+      <div class="first_page_content">
+        <h1>A QUALIFIED TEAM <br> OF</h1>
+        <h2>MECHANICS</h2>
+        <h6>Book your four wheeler & two wheeler for service/repair from <br>
+          anywhere and check their working status on your mobile & online 
+          platform.</h6>
+        <button class="Btn1">BOOK NOW </button>
+      </div>
+
+    </div>
+    <!--                                                                first page                                                                  -->
+
+
+    <!--                                                                second page                                                                  -->
+
+    <div class="second_page">
+      <div class="second_page_heading">
+        <h1><span>SERVICES </span> WE PROVIDE</h1>
+        <p>We Provide all the services, repairs and maintenance your vehicle needs. Some of the automotive services and
+          repairs we provide include..</p>
+      </div>
+      <div class="slide_Services">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/software.png'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>Inspection & Diagnostic test</h5>
+                  <p>The use of diagnostic tests is a relatively recent development in the automotive industry. With
+                    vehicles increasingly relying on computer chips and sensors.</p>
+                </div>
+              </div>
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/engine1.png'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>Engine Inspection & Service</h5>
+                  <p>During an engine servicing, a technician will conduct a comprehensive inspection of your vehicle's
+                    engine to check for any signs of wear or damage.</p>
+                </div>
+              </div>
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/bonut.jpg'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>General repairs </h5>
+                  <p>When you bring your vehicle in for general repairs, a trained technician will perform a thorough
+                    inspection to identify the root cause of the problem.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/tire6.png'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>Tires & wheel care </h5>
+                  <p>During a tire and wheel inspection, a technician will examine your tires for signs of wear and
+                    damage, such as low tread depth & punctures</p>
+                </div>
+              </div>
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/tire3.png'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>Automation & testing
+                  </h5>
+                  <p>Automation is changing the way we drive/ride. Self-driving/riding vehicles are already on the
+                    roads, and more systems are developing every day.</p>
+                </div>
+              </div>
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/oil change5.png'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>Oil changing</h5>
+                  <p>Changing the oil is a relatively simple process, but it's important to have it done by a qualified
+                    technician. </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/engine2.png'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>RSA services</h5>
+                  <p>Roadside Assistance (RSA), When you subscribe to an RSA service, you gain access to a network of
+                    trained professionals who can provide a range of assistance services. </p>
+                </div>
+              </div>
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/inventory.png'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>Clutch & body parts </h5>
+                  <p>During a clutch repair or replacement, a trained technician will inspect or replace clutch system,
+                    and adjust the clutch as necessary for proper performance. </p>
+                </div>
+              </div>
+              <div class="mechanics">
+                <div class="mechanic_img">
+                  <img src="{% static 'img/images/software2.png'%}">
+                </div>
+                <div class="mechanic_description">
+                  <h5>Scheduled Services </h5>
+                  <p>By following the manufacturer's recommended service schedule for your vehicle, you can help prevent
+                    more significant problems down the line.</p>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev cla"></div>
+          <div class="swiper-button-next cla"></div>
+
+        </div>
+      </div>
+
+
+      <div class="models_heading">
+        <h1>WE SERVICE MOST MAKES & MODELS</h1>
+      </div>
+
+      <div class="wrapper">
+        <div class="marquee">
+          <div class="images">
+            <img class="logoo" src="{% static 'img/images/honda.png'%}">
+            <img class="logoo" src="{% static 'img/images/toyata.png'%}">
+            <img class="logoo" src="{% static 'img/images/tvs.png'%}">
+            <img class="logoo" src="{% static 'img/images/jawa.png'%}">
+            <img class="logoo" src="{% static 'img/images/ktm.png'%}">
+            <img class="logoo" src="{% static 'img/images/suzaki.png'%}">
+            <img class="logoo" src="{% static 'img/images/enfield.png'%}">
+            <img class="logoo" src="{% static 'img/images/mahindra.png'%}">
+            <img class="logoo" src="{% static 'img/images/bajaj.png'%}">
+          </div>
+          <div class="images">
+            <img class="logoo" src="{% static 'img/images/honda.png'%}">
+            <img class="logoo" src="{% static 'img/images/toyata.png'%}">
+            <img class="logoo" src="{% static 'img/images/tvs.png'%}">
+            <img class="logoo" src="{% static 'img/images/jawa.png'%}">
+            <img class="logoo" src="{% static 'img/images/ktm.png'%}">
+            <img class="logoo" src="{% static 'img/images/suzaki.png'%}">
+            <img class="logoo" src="{% static 'img/images/enfield.png'%}">
+            <img class="logoo" src="{% static 'img/images/mahindra.png'%}">
+            <img class="logoo" src="{% static 'img/images/bajaj.png'%}">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!--                                                                second page                                                                  -->
+
+    <!--                                                                Third page                                                                  -->
+
+    <!-- <div class="third_page">
+    <div class="third_page_left">
+        <img src="mechanic_images/car1.jpg" alt="">
+    </div>
+    <div class="third_page_right">
+        <h1>PICK & DROP SERVICE</h1>
+        <p>As we realize that you lead a busy life, <br> so we’ve made it easy for you to pick and drop  <br> your vehicle.</p>
+        <button>Get Appointment</button>
+    </div>
+</div> -->
+
+
+
+    <!--                                                                Third page                                                                  -->
+    <!--                                                                Forth page                                                                  -->
+    <div class="forth_page">
+      <h1>Why Choose Us</h1>
+      <div class="fourth_page_block">
+        <div class="fourth_page_description">
+          <div class="fourth_page_icons">
+            <img src="{% static 'img/images/mechanic logo.png'%}" alt="">
+          </div>
+          <div class="fourth_page_data">
+            <h3>Expert Mechanics </h3>
+            <p>Highly skilled automotive professionals specializing in complex mechanical repairs, diagnostics, and
+              efficient problem-solving.</p>
+          </div>
+        </div>
+        <div class="fourth_page_description">
+          <div class="fourth_page_icons">
+            <img src="{% static 'img/images/rupee icon.png'%}" alt="">
+          </div>
+          <div class="fourth_page_data">
+            <h3>Reasonable Price </h3>
+            <p>We offer their services at reasonable prices, providing high-quality automotive repairs and maintenance
+              without overcharging their customers. </p>
+          </div>
+        </div>
+        <div class="fourth_page_description">
+          <div class="fourth_page_icons">
+            <img src="{% static 'img/images/time.png'%}" alt="">
+          </div>
+          <div class="fourth_page_data">
+            <h3>Fast Services </h3>
+            <p> The fast and efficient automotive services, ensuring quick turnaround times without compromising on
+              quality or attention to detail.</p>
+          </div>
+        </div>
+        <div class="fourth_page_description">
+          <div class="fourth_page_icons">
+            <img src="{% static 'img/images/trusted-user.png'%}" alt="">
+          </div>
+          <div class="fourth_page_data">
+            <h3>Trusted by Clients </h3>
+            <p> Trusted by clients due to their reputation for delivering reliable and high-quality automotive services,
+              earning the trust and satisfaction of their customers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--                                                                Forth page                                                                  -->
+    <!--                                                                Fifth page                                                                  -->
+    <div class="fifth_page">
+      <h1>Our Happy Clients</h1>
+      <div class="client_details">
+        <div class="autoplay">
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/jsmotors.webp'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "We are extremely happy to have associated with a start-up
+                like Moctech , which shares our empathy and understanding of
+                the relevance of mechanics in the entire mobility ecosystem.
+                While Shell is known for its world-class products"
+              </p>
+              <h5>Mr. Sankesh kumar Soni & Mr.Jayendra Arya </h5>
+              <h6>Founder - J.S. Motors</h6>
+            </div>
+          </div>
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/yadavauto1.png'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "As a company, our focus has been to strengthen our
+                after-sales service to ensure a hassle-free experience for
+                our B2C and B2B customer. The initiative with Moctech
+                focuses on empowering and increasing awareness for EVs. "
+              </p>
+              <h5>Mr. Lakhan Lal Yadav</h5>
+              <h6>Founder - Yadav Auto Parts</h6>
+            </div>
+          </div>
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/carmates.jpg'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "The inclusion of Moctech's Roadside Assistance on The Carmates
+                is a testament to our commitment to providing exceptional services
+                to our customers. This collaboration enhances our efforts to simplify
+                the car ownership journey. "</p>
+              <h5>Mr. Sourabh Nayak </h5>
+              <h6>Founder - The Carmates</h6>
+            </div>
+          </div>
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/stmotors.jpeg'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "Our primary objective is to provide exceptional after-sales service,
+                ensuring a seamless experience for our B2C and B2B customers.
+                Partnering with Moctech is a strategic move to empower and
+                raise awareness about electric vehicles (EVs)."
+              </p>
+              <h5>Mr. Tahir Khan </h5>
+              <h6>Founder - ST Motors</h6>
+            </div>
+          </div>
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/modern.png'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "We believe in making our customers' lives easier and more enjoyable.
+                By teaming up with ReadyAssist, we strive to empower individuals and
+                businesses, increase their knowledge about EVs, and provide unmatched
+                after-sales service for a hassle-free experience."
+              </p>
+              <h5>Mr. Shahid Khan </h5>
+              <h6>Founder - Modern Motors</h6>
+            </div>
+          </div>
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/BhopalMotors.jpeg'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "We understand the importance of customer satisfaction and
+                strive to go above and beyond in meeting their needs. Joining
+                forces with ReadyAssist enables us to empower our customers,
+                enhance their understanding of EVs, and provide exceptional
+                after-sales service."
+              </p>
+              <h5>Mr. Rakesh Tiwari</h5>
+              <h6>Founder - Bhopal Motors</h6>
+            </div>
+          </div>
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/owner/kamlesh.png'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "As a company, our focus has been to strengthen our
+                after-sales service to ensure a hassle-free experience for
+                our B2C and B2B customer. The initiative with Moctech
+                focuses on empowering and increasing awareness for EVs. "
+              </p>
+              <h5>Mr. Kamlesh Khatik</h5>
+              <h6>Founder - Sai Kripa AutoParts & Services</h6>
+            </div>
+          </div>
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/images.png'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "Moctech's Roadside Assistance on The Carmates
+                is a testament to our commitment to providing exceptional services
+                to our customers. This collaboration enhances our efforts to simplify
+                the car ownership journey. "
+              </p>
+              <h5>Mr. Sagar Ratnakarm</h5>
+              <h6>Founder - Sagar Automobiles</h6>
+            </div>
+          </div>
+          <div class="clients">
+            <div class="client_img">
+              <img src="{% static 'img/images/yaan.png'%}" alt="">
+            </div>
+            <div class="client_data">
+              <p>
+                "Moctech's Roadside Assistance on The Carmates
+                is a testament to our commitment to providing exceptional services
+                to our customers. This collaboration enhances our efforts to simplify
+                the car ownership journey. "
+              </p>
+              <h5>Mr. Divik Jain</h5>
+              <h6>Founder - Yaan Motors</h6>
+            </div>
+          </div>
+        </div>
+        &nbsp;
+      </div>
+    </div>
+    <!--                                                                Fifth page                                                                  -->
+    <!--                                                                Sixth page                                                                  -->
+    <div class="sixth_page">
+      <h1>HOW &nbsp; MECHANIC_ON_CLICK &nbsp; WORKS?</h1>
+      <div class="sixth_page_content">
+
+        <div class="line">
+
+          <div class="circle">
+            <div class="box box1">
+              <h6><span>(1)&nbsp;</span> Share Your Requirement </h6>
+              <h6> Tell us what your car/bike issue or requirement</h6>
+            </div>
+          </div>
+          <div class="circle">
+            <div class="box box2">
+              <h6> <span>(2)&nbsp; </span> Receive Upfront Quote</h6>
+              <h6>Our team will share services quote will
+                be shared according to the requirement</h6>
+            </div>
+          </div>
+          <div class="circle">
+            <div class="box box-3">
+              <h6> <span>(3)&nbsp; </span> Schedule Appointment</h6>
+              <h6>Your appointment will be scheduled; also
+                free pick up and drop facility is given
+                or doorstep car service is available </h6>
+              </span>
+            </div>
+          </div>
+          <div class="circle">
+            <div class="box box-4">
+              <h6> <span>(4)&nbsp; </span> Personal Attention</h6>
+              <h6> We provide personal attention for the car services and our engineers work
+                diligently on the car</h6>
+            </div>
+          </div>
+          <div class="circle">
+            <div class="box box5">
+              <h6> <span>(5)&nbsp;</span> Live Tracking & Updates</h6>
+              <h6> The option of live tracking the car service in real-time</h6>
+            </div>
+          </div>
+          <div class="circle">
+            <div class="box box6">
+              <h6> <span>(6)&nbsp; </span> Post Service Payment</h6>
+              <h6>Payment can be made after service, and payment modes accepted are
+                online, card payment, or cash payment.</h6>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!--                                                                Sixth page                                                                  -->
+    <!--                                                                Seventh page                                                                  -->
+    <div class="seventh_page">
+      <div class="service_partner_img">
+        <img height="500" src="{% static 'img/images/service_partner.png'%}" alt="">
+      </div>
+      <div class="service_partner_data">
+        <h1><span> Become Our </span> Service Partner </h1>
+        <p>Become our RSA partner & get assured business & take your
+          business next level with us. Choose your path to partnership
+          & get all the support you need to succeed.
+        </p>
+        <form class="service_partner_form" method="post" action="/messagePage">
+          <input type="text" placeholder="Name" class="form-control w-75 " required>
+          <input type="number" placeholder="Phone" class="form-control w-75 " required>
+          <input type="email" placeholder="Email" class="form-control w-75 " required>
+          <div class="check">
+            <input type="checkbox">
+            <h6> <span>I agree with </span>Terms & Conditions</h6>
+          </div>
+          <button class="service_partner_btn">Join us &rarr;</button>
+        </form>
+        <div>
+
+        </div>
+      </div>
+    </div>
+    <!--                                                                Seventh page                                                                  -->
+    <!--                                                                eighth page                                                                  -->
+
+    <div class="eighth_page">
+      <div class="footer_page_request_overlay">
+        <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff; height: 20px; width: 50px;"></i>
+        <div class="form_content">
+          <form action="/messagePage" method="post">
+            <h1>Want To Get Your Vehicles <br> Best Care.</h1>
+            <p>Get your vehicle service </p>
+            <input type="text" placeholder="Your name" required>
+            <input type="text" placeholder="Contact number" required>
+            <input type="text" placeholder="Vehicle name & model" required>
+            <textarea placeholder="Message" type="text" required></textarea>
+            <button class="form_content_button">Submit</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer_top">
+        <p>Now Breakdowns won’t break you down anymore, <br>
+          get your services done</p>
+        <button>Book Appointment</button>
+      </div>
+      <div class="footer">
+        <div class="all_footers">
+          <div class="footer__addr">
+            <div class="contact">
+              <h3>Contact :-</h3>
+              <p> Corporate Office-219, Chinar Incube Business Centre, Hoshangabad Road, Bhopal,Madhya Pradesh </p>
+              <p>Office Address:- 3117, C-Block, Surendra Landmark, Hoshangabad Road, BHOPAL,Madhya Pradesh </p>
+            </div>
+            <div class="email">
+              <h3>Email Us:-</h3>
+              <p>mechaniconclick@gmail.com <br> customercare@mechaniconclick.com</p>
+            </div>
+            <div class="number">
+              <h3>Phone No:-</h3>
+              <p> +91 810-9656-300 , +91 755-3100-156 </p>
+            </div>
+          </div>
+          <div class="footer1">
+            <h3>Services</h3>
+            <a href="/rsa">
+              <p>RSA Services</p>
+            </a>
+            <a href="/diagnostic">
+              <p>Diagnostic Test</p>
+            </a>
+            <a href="/generalService">
+              <p>General Services</p>
+            </a>
+            <a href="/engineService">
+              <p>Engine Servicing</p>
+            </a>
+            <a href="/clutchBody">
+              <p>Clutch & Body </p>
+            </a>
+            <a href="/tiresWheels">
+              <p>Tires & Wheels</p>
+            </a>
+            <a href="/acService">
+              <p>AC Services</p>
+            </a>
+            <a href="/lightsFitments">
+              <p>Lights & Fitments</p>
+            </a>
+            <a href="/shieldsGlasses">
+              <p>Shields & Glass</p>
+            </a>
+            <a href="/automation">
+              <p>Automation</p>
+            </a>
+            <a href="/oil">
+              <p>Oil Changing</p>
+            </a>
+            <a href="/vaccum">
+              <p>Vacuum Cleaning</p>
+            </a>
+            <a href="/dents">
+              <p>Dents & Painting</p>
+            </a>
+            <a href="/schedule">
+              <p>Schedule Services</p>
+            </a>
+            <a href="/insurance">
+              <p>Insurance Service</p>
+            </a>
+          </div>
+          <div class="footer2">
+            <h3>Media</h3>
+            <a href="https://www.facebook.com/profile.php?id=100085409284213&mibextid=ZbWKwL"> <i
+                class="fa-brands fa-facebook"></i> FaceBook</a>
+            <a href="https://youtube.com/@mechaniconclick"> <i class="fa-brands fa-youtube"></i> Youtube</a>
+            <a href="http://linkedin.com/in/moctech-private-limited-0646a7269"> <i class="fa-brands fa-linkedin"></i>
+              Linkedin</a>
+            <a href="https://instagram.com/mechanic_on_click?igshid=ZDdkNTZiNTM"><i class="fa-brands fa-instagram"></i>
+              Instagram</a>
+          </div>
+          <div class="footer3">
+            <h3>Legal</h3>
+            <p>FAQs</p>
+            <p>Privacy Policy</p>
+            <p>T & C</p>
+            <p>Sitemap</p>
+            <p>Careers</p>
+            <p>MOC Partners</p>
+            <p>Reviews</p>
+            <p>Directory</p>
+            <p>Offers</p>
+          </div>
+        </div>
+        <div class="foot_last">
+          <p>&copy; 2023 mechaniconclick.com | All rights reserved.</p>
+          <p> <span>Made with <span class="heart">☕</span> by our technical team</span></p>
+        </div>
+      </div>
+
+
+    </div>
+    <!--                                                                eighth  page                                                                  -->
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+    integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+    integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"
+    integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"
+    integrity="sha512-0bHMhYsdpiur1bT84kDH4D7cpxFQ9O7uA5yxVAqWC87h552Xt0swX4M+ZlXMKE8oPVRIJ5lAwXWO2UWeDwJJOw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="{% static 'js/slick.min.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  </body>
+  {% static 'js/' %}
+  </html>

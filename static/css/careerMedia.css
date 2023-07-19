@@ -1,0 +1,161 @@
+@media (max-width : 480px) {
+  nav{
+    height: 8vh;
+}
+  .logo img {
+    height: 8vw;
+}
+
+.hamburger {
+  display: block;
+}
+
+.header-text h1 {
+  font-size: 5vw;
+}
+
+.header-text p {
+  font-size: 3vw;
+}
+.jobOpeningBox{
+  height: 10vh;
+}
+.jobOpeningBox h1{
+  font-size: 4vw;
+}
+.jobOpeningBox p{
+  font-size: 2vw;
+}
+.jobOpeningBox button{
+  font-size: 2vw;
+}
+.nav-links {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: #4d4bb4;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    clip-path: (50px at 100% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 100%);
+    -webkit-clip-path: circle(1000px at 90% -22%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    margin: 5vw;
+    font-size: 5vw;
+  }
+  .login-button {
+    font-size: 5vw;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-1.7vw, 1vw);
+  }
+  .toggle .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-1.3vw, -.7vw);
+  }
+}
+
+
+
+
+
+@media (min-width: 481px) and (max-width: 767px) { 
+  nav{
+    height: 10vh;
+}
+  .logo img {
+    height: 8vw;
+}
+.hamburger {
+  display: block;
+}
+
+.header-text h1 {
+  font-size: 5vw;
+}
+
+.header-text p {
+  font-size: 3vw;
+}
+.jobOpeningBox{
+  height: 15vh;
+}
+.jobOpeningBox h1{
+  font-size: 4vw;
+}
+.jobOpeningBox p{
+  font-size: 2vw;
+}
+.jobOpeningBox button{
+  font-size: 2vw;
+}
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  background: #4d4bb4;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  clip-path: (50px at 100% -20%);
+  -webkit-clip-path: circle(50px at 90% -10%);
+  transition: all 1s ease-out;
+  pointer-events: none;
+}
+.nav-links.open {
+  clip-path: circle(1000px at 100%);
+  -webkit-clip-path: circle(1000px at 100% );
+  pointer-events: all;
+}
+.nav-links li {
+  opacity: 2;
+  margin: 5vw;
+  font-size: 3vw;
+}
+.login-button {
+  font-size: 3vw;
+}
+
+.hamburger div{
+  width: 4vw; 
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-1.6vw, 1vw);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-1.3vw, -.7vw);
+}
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) { 
+  nav{
+    height: 12vh;
+}
+
+.jobOpeningBox{
+  height: 25vh;
+}
+
+}
+
+
+

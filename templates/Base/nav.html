@@ -1,0 +1,90 @@
+{% load static %}
+<div class="dets0">
+    <div class="dets1">
+      <div class="cross">    <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff; height: 20px;"></i> </div>
+      <div class="booking-form">
+        <h2>Want To Get Your Vehicles Best Care.</h2>
+        <p>Search for your vehicle</p>
+        <form action="/bookservice" method="post">
+          <select class="round" name="typeOfReq" required>
+            <option selected disabled hidden value="">
+              Type of Request
+            </option>
+            <option value="Road-Side-Service">Road side service</option>
+            <option value="Pick-And-Drop">Pick & drop</option>
+            <option value="Workshop-Visit">Visit a nearby workshop.</option>
+          </select>
+          <select class="round" name="typeOfVehicle" id="type" required>
+            <option selected disabled hidden value="">
+              Type of Vehicle
+            </option>
+            <option value="Two-Wheeler">Two wheeler</option>
+            <option value="Four-wheeler">Four wheeler</option>
+          </select>
+          <select class="round" name="brand" id="brand" required>
+            <option value="" disabled selected>Brand</option>
+            <option value="Tata">Tata</option>
+            <option value="Maruti">Maruti</option>
+            <option value="Mahindra">Mahindra</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Honda">Honda</option>
+            <option value="Ford">Ford</option>
+            <option value="KIA">KIA</option>
+            <option value="Renault">Renault</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Toyota">Toyota</option>
+            <option value="MG">MG</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Skoda">Skoda</option>
+            <option value="Chevrolet">Chevrolet</option>
+          </select>
+          <select class="round" name="fuelType" id="fuel" required>
+            <option selected disabled hidden value="">
+              Select Fuel Type
+            </option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="CNG">CNG</option>
+          </select>
+          <input type="text" class="round mt-1" name="model" id="model" placeholder="Model" required>
+          <input type="text" class="mt-1" name="name" id="phone" placeholder="Enter Your Name" required />
+          <input type="tel" class="mt-1" name="contact" id="phone" placeholder="Number" pattern="[0-9]{10}" required />
+          <!-- <input style="color:#ffffff;" id="submit" class="mt-2" type="submit" value="Submit"/> -->
+          <button id="submit"  class="mt-2" >Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<div class="toggler">
+    <div class="toggler-top">
+      <h1 class="togglerCross">❌</h1>
+    </div>
+    <ul class="nav-link">
+      <li><a href="/">Home</a></li>
+      <li><a href="/service">Our-Services</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/career">Careers</a></li>
+      <li><a href="/login">Join Us</a></li>
+    </ul>
+  </div>
+
+<div class="nav">
+    <div class="logo"> </div>
+    <img class="logo_img" src="{% static 'img/images/MoC.png' %}" alt="">
+    <img class="menu_icon" src="{% static 'img/images/menu-line.svg' %}" alt="">
+    <div class="nav_content">
+     <a href="/"><p>Home</p></a> 
+     <a href="/service"> <p>Our-services</p></a> 
+     <a href="{% url 'carrer_page' %}"><p>Carrers</p></a> 
+     <a href="{% url 'contact_page' %}"><p>Contact</p></a> 
+     <a href="../login"> <p>Join Us</p></a> 
+    </div>
+</div>
+
+
